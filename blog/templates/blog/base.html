@@ -28,14 +28,16 @@
         <nav class="navbar navbar-static-top">
             <div class="col-md-9">
               <div class="navbar-header">
-                <a class="navbar-brand" href="#">Oh, What A Lovely Blog</a>
+                <a class="navbar-brand" href="/">Oh, What A Lovely Blog</a>
               </div>
             </div>
             <div class="col-md-3">
               <ul class="nav navbar-nav navbar-links navbar-right">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Browse</a></li>
-                <li><a href="#">Shop</a></li>
+                {% if user.is_authenticated %}
+                  <li><a href="{% url 'post_new' %}">New Post</a></li>
+                {% else %}
+                  <li><a class="disabled">New Post</a></li>
+                {% endif %}
               </ul>
             </div>
 
@@ -56,6 +58,7 @@
         <div class="col-md-4">
 
           <div class="sidebar">
+            <h3>Sidebar</h3>
             <div class="profile-pic">
               <img src="http://placekitten.com/200/200"/>
             </div>
