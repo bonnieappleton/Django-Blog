@@ -1,0 +1,64 @@
+
+nav.navbar  {
+  background-color: rgb(184, 222, 209);
+  padding: 10px;
+}
+
+
+.navbar-brand {
+  font-family: 'Fredericka the Great', cursive;
+  color: rgb(4, 11, 51);
+  font-size: 50px;
+  margin-bottom: 5px;
+}
+
+.navbar-links a {
+  color: rgb(4, 11, 51);
+  background-color: rgb(242, 76, 76);
+  margin: 5px;
+}
+
+.sidebar  {
+  background-color: rgb(184, 222, 209);
+  margin-top: 20px;
+}
+
+.profile-pic img {
+  margin: 10px;
+  align-items: center;
+}
+
+.sidebar-widget {
+  margin: 10px;
+}
+
+.blog-post {
+  /*border-bottom-color:  rgb(242, 76, 76);
+  border-bottom-style: solid;
+  border-bottom-width: 3px;*/
+}
+
+.blog-post h2 a{
+  color:  rgb(242, 76, 76);
+}
+
+p {
+  color: rgb(4, 11, 51);
+
+}
+
+.blog-post img {
+  align-items: center;
+}
+
+
+
+.footer {
+  background-color: rgb(4, 11, 51);
+}
+
+.footer li {
+  list-style: none;
+  color: rgb(184, 222, 209);
+  padding: 5px;
+}

@@ -1,0 +1,113 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<link href='https://fonts.googleapis.com/css?family=Fredericka+the+Great' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="{% static 'css/blog.css'%}">
+
+    <title>Django Blog</title>
+  </head>
+
+
+  <body>
+
+  <!--Navbar-->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <nav class="navbar navbar-static-top">
+            <div class="col-md-9">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="#">Oh, What A Lovely Blog</a>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <ul class="nav navbar-nav navbar-links navbar-right">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Browse</a></li>
+                <li><a href="#">Shop</a></li>
+              </ul>
+            </div>
+
+        </nav>
+      </div>
+    </div>
+  </div>
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-8">
+          {% block content %}
+          {% endblock %}
+        </div>
+
+        <div class="col-md-4">
+
+          <div class="sidebar">
+            <div class="profile-pic">
+              <img src="http://placekitten.com/200/200"/>
+            </div>
+            <div class="sidebar-widget">
+
+              <p>WIDGET</p>
+              <p>
+                Hello hello hello hello
+                Hello hello hello hello
+                Hello hello hello hello
+                Hello hello hello hello
+                Hello hello hello hello
+                Hello hello hello hello
+                Hello hello hello hello
+                Hello hello hello hello
+                Hello hello hello hello
+                Hello hello hello hello
+                Hello hello hello hello
+                Hello hello hello hello
+                Hello hello hello hello
+                Hello hello hello hello
+                Hello hello hello hello
+                Hello hello hello hello
+                Hello hello hello hello
+                Hello hello hello hello
+                Hello hello hello hello
+                Hello hello hello hello
+                Hello hello hello hello
+                Hello hello hello hello
+                Hello hello hello hello
+                Hello hello hello hello
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="footer text-right">
+            <ul>
+              <li>A blog by Bonnie Appleton</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
