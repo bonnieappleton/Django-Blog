@@ -1,0 +1,81 @@
+<html>
+  <head>
+		<link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="shoppinglist.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=true;">
+
+    <title>Shopping List</title>
+  </head>
+
+  <body>
+    <div class="container">
+
+      <header class="row" id="title">
+        <h1>Shopping List</h1>
+      </header>
+
+      <section class="row" id="add-to-list">
+        <form method="POST" action="" class="new-item">
+          <input class="add-item" type="text" name="add-item">
+          <input type="submit" class="btn" value="Add item">
+          <div class="list-row">
+            <input type="radio" name="section" value="veg">
+              <label>Produce</label>
+            </input>
+          </div>
+          <div class="list-row">
+            <input type="radio" name="section" value="chilled">
+              <label>Chilled</label>
+            </input>
+          </div>
+          <div class="list-row">
+            <input type="radio" name="section" value="household">
+              <label>Household</label>
+            </input>
+          </div>
+          <div class="list-row">
+            <input type="radio" name="section" value="other" checked>
+              <label>Other</label>
+            </input>
+          </div>
+        </form>
+      </section>
+
+      <section class="row list" id="shopping-list">
+        <form method="POST" action="">
+          <div class="list-row">
+            <input class="veg" type="checkbox" name="list-item">
+              <label>Food item 1</label>
+            </input>
+            <input type="submit" class="btn delete" value="Delete">
+          </div>
+          <div class="list-row">
+            <input class="chilled" type="checkbox" name="list-item">
+              <label>Food item 2</label>
+            </input>
+            <input type="submit" class="btn delete" value="Delete">
+          </div>
+          <div class="list-row">
+            <input class="household" type="checkbox" name="list-item">
+              <label>Food item 3</label>
+            </input>
+            <input type="submit" class="btn delete" value="Delete">
+          </div>
+          <div class="list-row">
+            <input type="checkbox" name="list-item">
+              <label>Food item 4</label>
+            </input>
+            <input type="submit" class="btn delete" value="Delete">
+          </div>
+          <div class="list-row">
+            <input type="submit" class="btn delete" value="Delete All">
+          </div>
+        </form>
+      </section>
+
+    </div>
+  </body>
+</html>

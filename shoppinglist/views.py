@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def shopping_list(request):
+    return render(request, 'shoppinglist/shopping_list.html', {})
