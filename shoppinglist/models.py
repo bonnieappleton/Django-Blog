@@ -18,8 +18,8 @@ class ListItem(models.Model):
         choices = SECTION_OPTIONS,
         default = other,
     )
-    checked = models.BooleanField()
-    displayed = models.BooleanField()
+    checked = models.BooleanField(default=False)
+    displayed = models.BooleanField(default=True)
 
     def __str__(self):
         return self.name
