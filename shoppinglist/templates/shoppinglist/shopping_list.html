@@ -1,9 +1,11 @@
+{% load staticfiles %}
+
 <html>
   <head>
 		<link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="shoppinglist.css">
+    <link rel="stylesheet" href="{% static 'css/shoppinglist.css' %}">
+
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=true;">
 
@@ -46,30 +48,17 @@
 
       <section class="row list" id="shopping-list">
         <form method="POST" action="">
+        {% for item in list_items %}
           <div class="list-row">
-            <input class="veg" type="checkbox" name="list-item">
-              <label>Food item 1</label>
+            <input class="{{ item.section }}" type="checkbox" name="list-item"
+              {% if item.checked %}
+                checked
+              {% endif %}>
+              <label>{{ item.name }}</label>
             </input>
             <input type="submit" class="btn delete" value="Delete">
           </div>
-          <div class="list-row">
-            <input class="chilled" type="checkbox" name="list-item">
-              <label>Food item 2</label>
-            </input>
-            <input type="submit" class="btn delete" value="Delete">
-          </div>
-          <div class="list-row">
-            <input class="household" type="checkbox" name="list-item">
-              <label>Food item 3</label>
-            </input>
-            <input type="submit" class="btn delete" value="Delete">
-          </div>
-          <div class="list-row">
-            <input type="checkbox" name="list-item">
-              <label>Food item 4</label>
-            </input>
-            <input type="submit" class="btn delete" value="Delete">
-          </div>
+        {% endfor %}
           <div class="list-row">
             <input type="submit" class="btn delete" value="Delete All">
           </div>
