@@ -21,42 +21,39 @@
 
       <section class="row" id="add-to-list">
         <form method="POST" action="" class="new-item">{% csrf_token %}
-          {{ form.as_p }}
-          <input class="add-item" type="text" name="add-item">
+          <input class="add-item" type="text" name="name">
           <input type="submit" class="btn" value="Add item">
           <div class="list-row">
-            <input type="radio" name="section" value="veg">
-              <label>Produce</label>
-            </input>
+            <input type="radio" name="section" value="VEG">
+            <label id="produce">Produce</label>
           </div>
           <div class="list-row">
-            <input type="radio" name="section" value="chilled">
-              <label>Chilled</label>
-            </input>
+            <input type="radio" name="section" value="CHI">
+            <label id="chilled">Chilled</label>
           </div>
           <div class="list-row">
-            <input type="radio" name="section" value="household">
-              <label>Household</label>
-            </input>
+            <input type="radio" name="section" value="HOU">
+            <label id="household">Household</label>
           </div>
           <div class="list-row">
-            <input type="radio" name="section" value="other" checked>
-              <label>Other</label>
-            </input>
+            <input type="radio" name="section" value="OTH" checked>
+            <label id="other">Other</label>
           </div>
         </form>
       </section>
 
-      <section class="row list" id="shopping-list">{% csrf_token %}
-        <form method="POST" action="">
+      <hr>
+
+      <section class="row list" id="shopping-list">
+        <form method="POST" action="">{% csrf_token %}
         {% for item in list_items %}
           <div class="list-row">
-            <input class="{{ item.section }}" type="checkbox" name="list-item"
+            <input id="item-{{ item.id }}" type="checkbox" name="list-item"
               {% if item.checked %}
                 checked
-              {% endif %}>
-              <label>{{ item.name }}</label>
-            </input>
+              {% endif %}
+            >
+            <label for="item-{{ item.id }}" class="{{ item.section }}">{{ item.name }}</label>
             <input type="submit" class="btn delete" value="Delete">
           </div>
         {% endfor %}

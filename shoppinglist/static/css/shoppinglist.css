@@ -21,6 +21,7 @@
 
 .add-item {
 width: 80%;
+height: 22px;
 }
 
 .btn {
@@ -41,6 +42,14 @@ label {
   margin: 5px 0px;
 }
 
-.VEG label {
-  color: red;
+#produce, .VEG {
+  color: rgb(66, 203, 68);
+}
+
+#chilled, .CHI {
+  color: rgb(57, 127, 236);
+}
+
+#household, .HOU {
+  color: rgb(210, 21, 21);
 }

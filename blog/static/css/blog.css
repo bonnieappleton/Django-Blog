@@ -24,8 +24,7 @@ nav.navbar  {
 }
 
 .profile-pic img {
-  margin: 10px;
-  align-items: center;
+  border-radius: 50%;
 }
 
 .sidebar-widget {

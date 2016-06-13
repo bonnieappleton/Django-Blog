@@ -9,7 +9,7 @@
     <img src="http://placekitten.com/520/300"/>
     <p>{{ post.text|linebreaks }}</p>
     {% if user.is_authenticated %}
-      <button class="btn btn-danger" href="{% url 'post_edit' pk=post.pk %}">Edit Post</button>
+      <a class="btn btn-danger" href="{% url 'post_edit' pk=post.pk %}">Edit Post</a>
     {% endif %}
   </div>
 {% endblock %}
