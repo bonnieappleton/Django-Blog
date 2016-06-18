@@ -48,17 +48,17 @@
         <form method="POST" action="">{% csrf_token %}
         {% for item in list_items %}
           <div class="list-row">
-            <input id="item-{{ item.id }}" type="checkbox" name="list-item"
+            <input id="item-{{ item.id }}" type="checkbox" name="list-item" value="{{ item.id }}"
               {% if item.checked %}
                 checked
               {% endif %}
             >
             <label for="item-{{ item.id }}" class="{{ item.section }}">{{ item.name }}</label>
-            <input type="submit" class="btn delete" value="Delete">
+            <button name="delete" type="submit" class="btn delete" value="{{ item.id }}">Delete</button>
           </div>
         {% endfor %}
-          <div class="list-row">
-            <input type="submit" class="btn delete" value="Delete All">
+          <div class="list-row" id="save-button">
+            <input type="submit" class="btn delete" name="save" value="Save">
           </div>
         </form>
       </section>

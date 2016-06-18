@@ -53,3 +53,7 @@ label {
 #household, .HOU {
   color: rgb(210, 21, 21);
 }
+
+#save-button .btn {
+  margin-top: 10px;
+}
